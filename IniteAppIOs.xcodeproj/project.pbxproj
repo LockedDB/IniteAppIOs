@@ -11,6 +11,11 @@
 		963E4ABC2A4F5BD500BE329C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E4ABB2A4F5BD500BE329C /* ContentView.swift */; };
 		963E4ABE2A4F5BD600BE329C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963E4ABD2A4F5BD600BE329C /* Assets.xcassets */; };
 		963E4AC22A4F5BD600BE329C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963E4AC12A4F5BD600BE329C /* Preview Assets.xcassets */; };
+		963E4ACA2A4F633200BE329C /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E4AC92A4F633200BE329C /* TagView.swift */; };
+		963E4ACC2A4F647900BE329C /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E4ACB2A4F647900BE329C /* ProjectCardView.swift */; };
+		963E4ACE2A4F6B3A00BE329C /* isAddingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E4ACD2A4F6B3A00BE329C /* isAddingButtonView.swift */; };
+		963E4AD02A506E0300BE329C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E4ACF2A506E0300BE329C /* CircleImageView.swift */; };
+		963E4AD22A5071C600BE329C /* ProjectCardFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E4AD12A5071C600BE329C /* ProjectCardFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		963E4ABD2A4F5BD600BE329C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963E4ABF2A4F5BD600BE329C /* IniteAppIOs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IniteAppIOs.entitlements; sourceTree = "<group>"; };
 		963E4AC12A4F5BD600BE329C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		963E4AC92A4F633200BE329C /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		963E4ACB2A4F647900BE329C /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		963E4ACD2A4F6B3A00BE329C /* isAddingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isAddingButtonView.swift; sourceTree = "<group>"; };
+		963E4ACF2A506E0300BE329C /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		963E4AD12A5071C600BE329C /* ProjectCardFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 		963E4AB82A4F5BD500BE329C /* IniteAppIOs */ = {
 			isa = PBXGroup;
 			children = (
+				963E4AC82A4F632500BE329C /* Views */,
 				963E4AB92A4F5BD500BE329C /* IniteAppIOsApp.swift */,
 				963E4ABB2A4F5BD500BE329C /* ContentView.swift */,
 				963E4ABD2A4F5BD600BE329C /* Assets.xcassets */,
@@ -67,6 +78,18 @@
 				963E4AC12A4F5BD600BE329C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		963E4AC82A4F632500BE329C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				963E4AC92A4F633200BE329C /* TagView.swift */,
+				963E4ACB2A4F647900BE329C /* ProjectCardView.swift */,
+				963E4ACD2A4F6B3A00BE329C /* isAddingButtonView.swift */,
+				963E4ACF2A506E0300BE329C /* CircleImageView.swift */,
+				963E4AD12A5071C600BE329C /* ProjectCardFooterView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963E4AD02A506E0300BE329C /* CircleImageView.swift in Sources */,
+				963E4AD22A5071C600BE329C /* ProjectCardFooterView.swift in Sources */,
+				963E4ACC2A4F647900BE329C /* ProjectCardView.swift in Sources */,
 				963E4ABC2A4F5BD500BE329C /* ContentView.swift in Sources */,
+				963E4ACE2A4F6B3A00BE329C /* isAddingButtonView.swift in Sources */,
 				963E4ABA2A4F5BD500BE329C /* IniteAppIOsApp.swift in Sources */,
+				963E4ACA2A4F633200BE329C /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,21 +1,18 @@
-//
-//  ContentView.swift
-//  IniteAppIOs
-//
-//  Created by Dani Benet on 30/6/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                ProjectCardView()
+            }
+            .navigationTitle("Projects")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Image(systemName: "ellipsis")
+                }
+            }
         }
-        .padding()
     }
 }
 
@@ -24,3 +21,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
