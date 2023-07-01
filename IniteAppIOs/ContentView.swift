@@ -4,7 +4,20 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ProjectCardView()
+                ProjectCardView(
+                    title: "Pages “About” and “Careers”",
+                    description: "All the details are in the file, I’m sure it will turn out cool! Let’s do the exact opposite of the first concept.",
+                    topicLines: [
+                        "There was an issue with the delivery",
+                        "Let’s talk about the kitchen!"
+                    ],
+                    participantsUrls: [
+                        "https://picsum.photos/200/300.jpg",
+                        "https://picsum.photos/200/200.jpg"
+                    ],
+                    nMessages: 1,
+                    nAttachments: 3
+                )
             }
             .navigationTitle("Projects")
             .toolbar {

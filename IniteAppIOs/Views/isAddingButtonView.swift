@@ -27,7 +27,7 @@ struct isAddingButtonView: View {
                 .transition(.scale)
             } else {
                 Image(systemName: "plus")
-                Text("Add Button")
+                Text("Add a topic")
                     .onTapGesture {
                         withAnimation {
                             self.isAdding.toggle()
@@ -45,5 +45,6 @@ struct isAddingButtonView: View {
 struct isAddingButtonView_Previews: PreviewProvider {
     static var previews: some View {
         isAddingButtonView()
+            .padding()
     }
 }
