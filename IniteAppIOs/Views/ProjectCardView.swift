@@ -49,11 +49,11 @@ struct ProjectCardView: View {
                     .stroke(Color.primary)
                     .foregroundColor(.clear)
             )
+            .onTapGesture {
+                print("tapped")
+            }
         }
         .padding()
-        .onTapGesture {
-            print("tapped")
-        }
     }
 }
 

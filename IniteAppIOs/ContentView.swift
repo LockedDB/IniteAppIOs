@@ -27,6 +27,9 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Image(systemName: "ellipsis")
+                        .onTapGesture {
+                            print("menu tapped")
+                        }
                 }
             }
         }
