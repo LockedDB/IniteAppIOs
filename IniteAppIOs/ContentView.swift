@@ -1,39 +1,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var firestoreManager: FirestoreManager
+    
     var body: some View {
-        NavigationView {
-            ScrollView {
+        ScrollView {
+            if !firestoreManager.projects.isEmpty {
                 ProjectCardView(
-                    title: "Pages “About” and “Careers”",
-                    description: "All the details are in the file, I’m sure it will turn out cool! Let’s do the exact opposite of the first concept.",
-                    topicLines: [
-                        "There was an issue with the delivery",
-                        "Let’s talk about the kitchen!"
-                    ],
-                    participantsUrls: [
-                        "https://picsum.photos/200/300.jpg",
-                        "https://picsum.photos/200/200.jpg"
-                    ],
-                    tags: [
-                        "Website",
-                        "App"
-                    ],
-                    nMessages: 1,
-                    nAttachments: 3
+                    title: firestoreManager.projects[0].title,
+                    description: firestoreManager.projects[0].description,
+                    topicLines: firestoreManager.projects[0].topicLines,
+                    participantsUrls: firestoreManager.projects[0].participantsUrls,
+                    tags: firestoreManager.projects[0].tags,
+                    nMessages: firestoreManager.projects[0].nMessages,
+                    nAttachments: firestoreManager.projects[0].nAttachments
                 )
             }
-            .navigationTitle("Projects")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Image(systemName: "ellipsis")
-                        .onTapGesture {
-                            print("menu tapped")
-                        }
-                }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Image(systemName: "ellipsis")
+                    .onTapGesture {
+                        print("menu tapped")
+                    }
             }
         }
+        .navigationTitle("Projects")
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

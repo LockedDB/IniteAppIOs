@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct IniteAppIOsApp: App {
+    @StateObject var firestoreManager = FirestoreManager()
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                ContentView()                
+                ContentView()
+                    .environmentObject(firestoreManager)
             }
         }
     }
