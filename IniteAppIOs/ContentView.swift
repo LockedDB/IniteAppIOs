@@ -15,6 +15,10 @@ struct ContentView: View {
                         "https://picsum.photos/200/300.jpg",
                         "https://picsum.photos/200/200.jpg"
                     ],
+                    tags: [
+                        "Website",
+                        "App"
+                    ],
                     nMessages: 1,
                     nAttachments: 3
                 )

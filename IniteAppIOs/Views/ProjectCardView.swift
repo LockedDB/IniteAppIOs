@@ -5,22 +5,14 @@ struct ProjectCardView: View {
     var description: String = ""
     var topicLines: [String]
     var participantsUrls: [String]
+    var tags: [String]
     var nMessages: Int = 0
     var nAttachments: Int = 0
     
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 8) {
-                HStack {
-                    HStack {
-                        TagView(text: "Website", color: .orange)
-                        TagView(text: "App", color: .cyan)
-                    }
-                    
-                    Spacer()
-                    
-                    Image(systemName: "ellipsis")
-                }
+                ProjectCardHeaderView(tags: tags)
                 
                 Text(title)
                     .font(.title2)
@@ -78,6 +70,7 @@ struct ProjectCardView_Previews: PreviewProvider {
                 "https://picsum.photos/200/300.jpg",
                 "https://picsum.photos/200/200.jpg"
             ],
+            tags: ["Website", "Apps"],
             nMessages: 1,
             nAttachments: 3
         )
