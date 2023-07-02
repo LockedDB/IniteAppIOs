@@ -20,6 +20,15 @@ struct IniteAppIOsApp: App {
         WindowGroup {
             NavigationStack {
                 ContentView()
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Image(systemName: "ellipsis")
+                                .onTapGesture {
+                                    print("menu tapped")
+                                }
+                        }
+                    }
+                    .navigationTitle("Projects")
                     .environmentObject(firestoreManager)
             }
         }
