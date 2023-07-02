@@ -5,15 +5,15 @@ struct ContentView: View {
     
     var body: some View {
         ScrollView {
-            if !firestoreManager.projects.isEmpty {
+            ForEach(firestoreManager.projects, id: \.id) { project in
                 ProjectCardView(
-                    title: firestoreManager.projects[0].title,
-                    description: firestoreManager.projects[0].description,
-                    topicLines: firestoreManager.projects[0].topicLines,
-                    participantsUrls: firestoreManager.projects[0].participantsUrls,
-                    tags: firestoreManager.projects[0].tags,
-                    nMessages: firestoreManager.projects[0].nMessages,
-                    nAttachments: firestoreManager.projects[0].nAttachments
+                    title: project.title,
+                    description: project.description,
+                    topicLines: project.topicLines,
+                    participantsUrls: project.participantsUrls,
+                    tags: project.tags,
+                    nMessages: project.nMessages,
+                    nAttachments: project.nAttachments
                 )
             }
         }
@@ -27,7 +27,6 @@ struct ContentView: View {
         }
         .navigationTitle("Projects")
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -35,4 +34,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-

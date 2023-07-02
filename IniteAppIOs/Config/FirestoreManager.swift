@@ -26,6 +26,7 @@ class FirestoreManager: ObservableObject {
     private func mapDocumentToProject(document: QueryDocumentSnapshot) -> Project? {
         let data = document.data()
         return Project(
+            id: document.documentID,
             title: data["title"] as? String ?? "",
             description: data["description"] as? String ?? "",
             topicLines: data["topicLines"] as? [String] ?? [],

@@ -8,6 +8,7 @@
 import Foundation
 
 class Project {
+    var id: String
     var title: String
     var description: String
     var topicLines: [String]
@@ -16,7 +17,8 @@ class Project {
     var nMessages: Int
     var nAttachments: Int
 
-    init(title: String, description: String, topicLines: [String], participantsUrls: [String], tags: [String], nMessages: Int, nAttachments: Int) {
+    init(id: String, title: String, description: String, topicLines: [String], participantsUrls: [String], tags: [String], nMessages: Int, nAttachments: Int) {
+        self.id = id
         self.title = title
         self.description = description
         self.topicLines = topicLines
